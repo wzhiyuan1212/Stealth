@@ -13,9 +13,46 @@ public class MonoPlayer : MonoEntity {
 	public float Speed = 1f;
 	public float rotateSpeed = 1f;
 	private Rigidbody _rg;
+
+	private Dictionary<int, MonoAI> _attackTargetDict;
 	// Use this for initialization
 	void Start () {
 		_rg = transform.GetComponent<Rigidbody>();
+		_attackTargetDict = new Dictionary<int, MonoAI>();
+		return;
+	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		MonoAI ai = other.transform.GetComponent<MonoAI>();
+		if (ai != null && ai.status != AIStatus.Freeze && ai.status != AIStatus.Attack)
+		{
+			_attackTargetDict[ai.index] = ai;
+		}
+		return;
+	}
+
+	private void OnTriggerExit(Collider other)
+	{
+		MonoAI ai = other.transform.GetComponent<MonoAI>();
+		if (ai != null && ai.status != AIStatus.Freeze && ai.status != AIStatus.Attack)
+		{
+			_attackTargetDict.Remove(ai.index);
+		}
+		return;
+	}
+
+	private void Update()
+	{
+		foreach(MonoAI ai in _attackTargetDict.Values)
+		{
+			if (ai.status == AIStatus.Freeze || ai.status == AIStatus.Attack)
+			{
+				continue;
+			}
+			ai.attackTimer += ai.attackTimer + Time.deltaTime;
+		}
+
 		return;
 	}
 	
@@ -32,6 +69,8 @@ public class MonoPlayer : MonoEntity {
 		float y = Input.GetAxis("Vertical");
 		if (Mathf.Approximately(x * x + y * y, 0f))
 		{
+			_rg.velocity = Vector3.zero;
+			_rg.angularVelocity = Vector3.zero;
 			return;
 		}
 

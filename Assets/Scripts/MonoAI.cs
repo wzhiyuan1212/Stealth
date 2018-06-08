@@ -12,6 +12,7 @@ public enum AIStatus
 }
 
 public class MonoAI : MonoEntity{
+	public int index;
 	public MonoSector detector;
 	public AIStatus status = AIStatus.Patral;
 	public Vector3[] path;
@@ -19,12 +20,37 @@ public class MonoAI : MonoEntity{
 	private NavMeshAgent _agent;
 	private Animator _animator;
 
+	private const float killTime = 3f;
+	private float _attackTimer = 0f;
+	public float attackTimer
+	{
+		get
+		{
+			return _attackTimer;
+		}
+		set
+		{
+			if (value > killTime)
+			{
+				_animator.SetTrigger("Killed");
+				_attackTimer = 0f;
+			}
+			else
+			{
+				_attackTimer = value;
+			}
+		}
+	}
+
 	void Start () {
 		detector = transform.GetComponentInChildren<MonoSector>();
 		detector.Init(this);
 		entityType = EntityType.AI;
 		_agent = transform.GetComponent<NavMeshAgent>();
-		_agent.SetDestination(path[0]);
+		if (path.Length > 0)
+		{
+			_agent.SetDestination(path[0]);
+		}
 		_animator = transform.GetComponent<Animator>();
 		switch(status)
 		{
@@ -38,6 +64,12 @@ public class MonoAI : MonoEntity{
 
 	private void Update()
 	{
+		return;
+	}
+
+	public void SetDetectorEnable(bool isEnable)
+	{
+		//detector.enabled = isEnable;
 		return;
 	}
 

@@ -25,6 +25,10 @@ public class MonoSector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (_owner == null)
+		{
+			return;
+		}
 		UpdateMesh(radius, degree, segments);
 		return;
 	}

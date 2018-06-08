@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\FSM\AI\AIAttackState.cs" />
+    <Compile Include="Assets\Scripts\FSM\AI\AIFreezeState.cs" />
     <Compile Include="Assets\Scripts\FSM\AI\AIIdleState.cs" />
     <Compile Include="Assets\Scripts\FSM\AI\AIPatrolState.cs" />
     <Compile Include="Assets\Scripts\MonoAI.cs" />
