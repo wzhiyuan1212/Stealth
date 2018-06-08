@@ -1,0 +1,11 @@
+5.6.4p4:2.8.0.0
+StandaloneWindows
+J:/Unity5.6/Editor/Data/Managed/UnityEngine.dll
+J:/Unity5.6/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
+J:/Unity5.6/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
+J:/Unity5.6/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll
+J:/Unity5.6/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll
+J:/Unity5.6/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll
+J:/Unity5.6/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll
+J:/Unity5.6/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll
+J:/Unity5.6/Editor/Data/Managed/UnityEditor.dll
