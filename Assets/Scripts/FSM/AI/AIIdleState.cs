@@ -7,7 +7,7 @@ public class AIIdleState : StateMachineBehaviour {
 	public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		_owner = animator.transform.GetComponent<MonoAI>();
-		_owner.status = AIStatus.Patral;
+        _owner.status = AIStatus.Idle;
 
 		return;
 	}
