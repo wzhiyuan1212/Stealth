@@ -20,7 +20,7 @@ public class MonoAI : MonoEntity{
 	private NavMeshAgent _agent;
 	private Animator _animator;
 
-	private const float killTime = 3f;
+	private const float killTime = 5f;
 	private float _attackTimer = 0f;
 	public float attackTimer
 	{

@@ -74,8 +74,10 @@ public class MonoPlayer : MonoEntity {
 			return;
 		}
 
-		UpdateRotation(x, y);
-		UpdatePosition(y);
+		Vector3 movement = new Vector3(x, 0f, y);
+		_rg.MovePosition(movement.normalized * Speed * Time.deltaTime + transform.position);
+		//UpdateRotation(x, y);
+		//UpdatePosition(y);
 
 		return;
 	}

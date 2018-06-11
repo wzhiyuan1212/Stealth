@@ -29,6 +29,8 @@ public class MonoAIManager : MonoBehaviour {
 			ai.SetEnable(false);
 		}
 
+		MonoUIManager.Instance.OnLevelEnd(isWin);
+
 		return;
 	}
 }
