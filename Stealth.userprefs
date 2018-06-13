@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{E6B32A77-5141-4DAD-9192-3875D2B9AC46}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AstarPathfindingProject/Readme_upgrading.txt">
+    <Files>
+      <File FileName="Assets/Scripts/MonoPickupManager.cs" Line="11" Column="9" />
+      <File FileName="Assets/Scripts/MonoPickup.cs" Line="9" Column="58" />
+      <File FileName="Assets/Scripts/MonoEndPoint.cs" Line="12" Column="10" />
+      <File FileName="Assets/Scripts/MonoAI.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/FSM/AI/AIIdleState.cs" Line="10" Column="38" />
+      <File FileName="Assets/Scripts/FSM/AI/AIFreezeState.cs" Line="5" Column="14" />
+      <File FileName="Assets/Scripts/MonoAIManager.cs" Line="32" Column="46" />
+      <File FileName="Assets/AstarPathfindingProject/Readme.txt" Line="10" Column="41" />
+      <File FileName="Assets/AstarPathfindingProject/Readme_upgrading.txt" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Stealth PreferredExecutionTarget="Unity.Editor" />
+</Properties>
